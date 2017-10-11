@@ -1,0 +1,798 @@
+
+@media only screen and (min-width : 320px)
+	.menu_mobile
+		height: 100%
+		width: 0%
+		position: fixed
+		z-index: 99999
+		top: 0
+		right: 0
+		background-color: #fff
+		overflow-x: hidden
+		transition: .5s
+		padding-top: 30px
+		text-align: left
+		ul
+			text-align: center
+			padding: 0
+			li
+				list-style: none
+				padding: .4em
+
+
+			&:nth-of-type(4)
+				padding: 10px
+				form
+					display: flex
+					align-items: center
+					justify-content: center
+					padding-left: 20px
+					font-size: 12px
+					height: 20px
+					line-height: 20px
+				
+				input
+					width: 210px
+					border: none
+					border-bottom: 2px solid black
+					transition: all .5s
+					outline: none
+					&:focus,&:active
+						border-bottom: 2px solid #8f3342
+						transition: all .5s
+				button
+					background-color: transparent
+					padding: 0
+					padding-right: 10px
+					border: none
+					&:active, &:focus
+						outline: none
+					i
+						display: inline-block
+						height: 100%
+						color: #8f3342
+						font-size: 16px
+						line-height: 30px
+			&:first-of-type
+				display: flex
+				flex-direction: row-reverse
+				justify-content: space-between
+				align-items: center
+				.lang
+					margin-left: 20px
+					a
+						display: inline-block
+						width: 30px
+						height: 30px
+						text-align: center
+						line-height: 30px
+					.active-lang
+						background-color: #ed0039
+						color: #fff
+						border-radius: 2px	
+			&:nth-of-type(2)
+				border-bottom: 2px solid grey
+				padding-bottom: .4em
+				a
+					font-size: 18px
+					padding: 8px
+					transition: .5s
+					&:hover, &:focus, &:active
+						transition: .5s
+						background-color: #ed0039
+						border-radius: 3px
+						color: #fff
+			&:nth-of-type(3)
+				border-bottom: 2px solid grey
+				padding-bottom: .4em
+				a
+					font-size: 14px
+					padding: 8px
+
+		a
+			font-size: 16px
+			text-decoration: none
+			color: black
+		.button_close
+			width: 100%
+			padding-right: 20px
+			margin-bottom: 10px
+
+
+
+
+	h1
+		font-size: 28px
+	h2
+		font-size: 26px
+	h3
+		font-size: 24px
+	h4
+		font-size: 18px
+	h5
+		font-size: 16px
+	#navbar
+		height: 60px
+		line-height: 60px
+		img
+			width: 100px
+		.desctop
+			display: none
+		.mobile
+			.menu_block
+				text-align: right
+				.button_mob-menu
+					vertical-align: middle
+					font-size: 30px
+					line-height: 30px
+
+	.header
+		background-size: cover
+		height: 180px
+		h1
+			margin: 10px 0px 5px 0
+			font-size: 20px
+		p
+			font-size: 14px
+			margin: 5px 0
+		ul
+			margin-top: 10px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 12px
+			li
+				i
+					color: #ed0039
+					padding-right: 10px
+
+		.button
+			font-size: 12px
+			margin-top: 20px
+			padding: 5px 10px
+			color: #fff
+	.contact 
+		.container 
+			.row 
+				.col-xs-24
+					margin: 10px 0
+					text-align: center
+				.col-md-12:nth-of-type(3)
+					padding: 0
+					&:before
+						border-color: transparent
+		.sub_button
+			margin: 10px 30px
+			float: left
+		ul
+			text-align: left
+			font-size: 13px
+			padding: 0 15px
+	.news
+		padding-top: 30px
+		.col-md-24
+			&:first-of-type
+				a
+					margin-right: 6px
+			justify-content: space-between
+
+		.news_block
+			&:hover
+				&:before
+					border-color: transparent
+		.sub_button
+			margin-left: 30px
+		.news_main
+			padding-bottom: 20px
+			border-bottom: 2px solid #e1e0de
+			.image
+				flex-basis: 100%
+				min-width: 257px
+				background-size: cover
+				border: none
+				margin: auto
+			.text
+				flex-basis: 100%
+				min-width: 290px
+				border: none
+				margin: auto
+
+		.news_sub
+			height: 98px
+			h6
+				font-size: 14px 
+			&:first-of-type
+				margin-bottom: 20px
+			.image
+				flex-basis: 35%
+				height: 100%
+				background-size: cover
+				border: none
+				box-sizing: border-box
+			.text
+				flex-basis: 65%	
+				padding: 7px
+				height: 100%
+				border: none
+				box-sizing: border-box
+				position: relative
+
+				span
+					position: absolute
+					bottom: 5px
+					left: 5px
+		
+	.insurance
+		.insurance_block
+			.insurance_image
+				flex-basis: 100%
+				min-width: 100%
+				min-height: 220px
+			.insurance_text
+				flex-basis: 100%
+				min-width: 100%
+				padding: 10px 25px 30px 25px
+				h3
+					a
+						&:after
+							height: 0
+				p
+					font-size: 14px
+				.button
+					width: 110px
+	.footer
+		.site_map
+			margin: 30px 0
+			.col-md-6
+				&:hover
+					background-color: transparent
+				&:last-of-type
+					ul
+						padding-left: 20px
+						li
+							background-color: transparent
+							padding: 0
+							padding-left: 20px
+							line-height: 32px
+							font-size: 14px
+							i
+								top: 5px
+								left: 1px
+							&:last-child
+								i
+									top: 7px 
+				h6
+					font-size: 16px
+					margin: 15px 0px 15px 20px
+				ul
+					border-bottom: 1px solid #fff
+					border-top: 1px solid #fff
+					padding: 10px 10px
+					margin: 0
+					li
+						padding: 7px 10px 
+						font-size: 14px
+						a
+							font-size: 14px
+							&:before
+								border: none
+							&:hover
+								text-decoration: none
+
+
+		.promises
+			p
+			text-align: center
+		.footer_contact
+			line-height: 30px
+			text-align: center
+			ul
+				padding: 15px 0
+				li
+					padding: 0 15px
+					&:last-child
+						padding-right: 15px
+					a
+						&:after
+							background-color: transparent
+			.button_up 
+				margin: 10px auto 15px auto
+
+			span
+				float: none
+				a
+					&:after, &:before
+						background-color: transparent
+
+
+
+@media only screen and (min-width : 360px)
+	.header
+		background-size: cover
+		height: 210px
+		h1
+			margin: 15px 0px 5px 0
+			font-size: 22px
+		p
+			font-size: 16px
+			margin: 5px 0
+		ul
+			margin-top: 10px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 14px
+			li
+				i
+					color: #ed0039
+					padding-right: 10px
+
+		.button
+			font-size: 12px
+			margin-top: 20px
+			padding: 5px 10px
+			color: #fff
+	.news
+		.news_sub
+			h6
+				font-size: 14px
+		.news_main
+			.image
+				flex-basis: 100%
+			.text
+				padding: 20px 10px
+
+
+@media only screen and (min-width : 410px)
+	.header
+		background-size: cover
+		height: 230px
+		h1
+			margin: 25px 0px 5px 0
+			font-size: 22px
+		p
+			font-size: 16px
+			margin: 5px 0
+		ul
+			margin-top: 10px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 14px
+			li
+				i
+					color: #ed0039
+					padding-right: 10px
+
+		.button
+			font-size: 12px
+			margin-top: 20px
+			padding: 5px 10px
+			color: #fff
+	.news
+		.news_sub 
+			.image
+				flex-basis: 30%
+		.news_main
+			.image
+				min-width: 300px
+				flex-basis: 100%
+			.text
+				flex-basis: 100%
+				min-width: 300px
+				padding: 20px 10px
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px)
+	.header
+		background-size: cover
+		height: 270px
+		h1
+			margin: 30px 0px 5px 0
+			font-size: 26px
+		p
+			font-size: 18px
+			margin: 10px 0
+		ul
+			margin-top: 20px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 16px
+			li
+				i
+					color: #ed0039
+					padding-right: 10px
+
+		.button
+			font-size: 14px
+			margin-top: 20px
+			padding: 5px 10px
+			color: #fff
+	.news
+		.news_sub 
+			.image
+				flex-basis: 27%
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	h1
+		font-size: 36px
+	h2
+		font-size: 30px
+	h3
+		font-size: 24px
+	h4
+		font-size: 18px
+	h5
+		font-size: 16px
+	.fixed_block
+		ul
+			top: 30%
+			.mobile
+				display: none
+			.hide_elem
+				display: block
+
+	.menu_mobile
+		ul
+			li
+				list-style: none
+				padding: .6em
+			&:nth-of-type(2)
+				border-bottom: 2px solid grey
+				padding-bottom: .4em
+				.button
+					width: 170px
+					font-size: 18px
+					line-height: 25px
+				a
+					font-size: 22px
+			&:nth-of-type(3)
+				border-bottom: 2px solid grey
+				padding-bottom: .4em
+				a
+					font-size: 18px
+			&:nth-of-type(4)
+				padding: 0
+				text-align: center
+				font-size: 16px
+				input
+					width: 310px
+					padding-left: 10px
+		.button_close
+			width: 100%
+			display: inline-block
+			text-align: right
+			padding-right: 20px
+			margin-bottom: 10px
+
+	.header
+		height: 430px
+		h1
+			margin-top: 80px
+			margin-bottom: 0
+			font-family: Merriweather-Regular
+			font-size: 36px
+		p
+			font-size: 24px
+			margin-top: 15px
+			margin-bottom: 0
+		ul
+			margin-top: 30px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 18px
+	
+		.button
+			font-size: 16px
+			margin-top: 40px
+			padding: 10px 20px
+			text-decoration: none
+			color: #fff
+	.contact
+		.container
+			.col-md-12
+				ul
+					text-align: left
+					margin: 0
+					padding-top: 10px
+		.sub_button
+			margin: 10px 0px
+			float: left
+
+	.news
+		.col-md-24
+			&:first-of-type
+				a
+					margin-right: 0
+			justify-content: flex-start
+		.news_block
+			&:hover
+				&:before
+					border-color: #892737
+			.text
+				border: 2px solid #e1e0de
+				border-left: none
+		.news_main
+			padding-bottom: 0
+			border-bottom: 0px solid transparent
+			.image
+				flex-basis: 35%
+				margin: 0
+				min-width: 180px
+			.text
+				flex-basis: 65%
+				margin: 0
+				padding: 20px
+
+		.news_sub
+			h6
+				font-size: 14px 
+			width: 49%
+			margin-top: 15px
+			float: left
+			.image
+				flex-basis: 35%
+
+			.text
+				flex-basis: 65%
+			
+			&:first-child
+				margin-right: 1%
+			&:last-child
+				margin-top: 15px
+				margin-left: 1%
+
+
+	.insurance
+		.insurance_block
+
+			.insurance_image
+				flex-basis: 41%
+				min-width: 41%
+				
+			.insurance_text
+				flex-basis: 59%
+				min-width: 59%
+				padding: 10px 30px 30px 30px
+
+				p
+					font-size: 14px
+				.button
+					width: 140px
+	.footer
+		.site_map
+			margin: 30px 0
+			.col-md-6
+				background-color: transparent
+				transition: .5s
+
+				&:hover
+					background-color: transparent
+					transition: .5s								
+				h6
+					font-size: 16px
+					margin: 30px 0 10px 20px
+				ul
+					border: none
+					padding: 0 0 30px 20px
+					li
+						list-style-type: none
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	#navbar
+		height: 60px
+		line-height: 60px
+		img
+			width: 168px
+		.navbar_top, .navbar_bottom
+			display: none
+	.header
+		height: 575px
+		h1
+			margin-top: 100px
+		p
+			font-size: 16px
+		h1
+			margin-top: 140px
+			margin-bottom: 0
+			font-family: Merriweather-Regular
+		p
+			font-size: 24px
+			margin-top: 25px
+			margin-bottom: 0
+		ul
+			margin-top: 45px
+			margin-bottom: 0
+			padding-left: 0
+			font-size: 18px
+
+		li
+			list-style-type: none
+
+			i
+				color: #ed0039
+				padding-right: 10px
+	.news
+		.news_block
+			.image
+
+			.text
+				border: 2px solid #e1e0de
+				border-left: none
+				span
+					bottom: 15px
+		.news_main
+			
+			.image
+				flex-basis: 30%
+				margin: 0
+				min-width: 180px
+			.text
+				flex-basis: 70%
+				margin: 0
+				padding: 20px
+		
+		.news_sub
+			width: 49%
+			margin-top: 15px
+			float: left
+			.image
+				flex-basis: 25%
+			.text
+				flex-basis: 75%
+			
+			&:first-child
+				margin-right: 1%
+			&:last-child
+				margin-top: 15px
+				margin-left: 1%
+	.insurance
+		.insurance_block
+
+			.insurance_image
+				flex-basis: 40%
+				min-width: 40%
+				
+			.insurance_text
+				flex-basis: 60%
+				min-width: 60%
+				padding: 10px 30px 30px 30px
+
+				p
+					font-size: 14px
+				.button
+					width: 140px
+	.footer
+		.site_map
+			margin: 0
+		.footer_contact
+			line-height: 55px
+			ul
+				padding: 0
+			.button_up
+				margin: 0 auto
+			span
+				float: right
+				a
+					&:after, &:before
+						background-color: #fff
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.mobile
+		display: none
+	#navbar
+		height: 96px
+		line-height: 96px 
+		.desctop
+			display: block
+		.navbar_top, .navbar_bottom	
+			display: block
+	.header
+		height: 600px
+		h1
+			margin-top: 140px
+	.contact
+		.container
+			.row
+				.col-xs-24
+					text-align: left
+					margin: 20px 0
+				.col-md-12:nth-of-type(3)
+					padding-left: 30px
+					&:before
+						border: 1px solid #dcdad7
+	.news
+		.news_block
+			margin-top: 40px
+			
+			.image
+				
+			.text
+				padding: 20px
+
+		.news_main
+			padding-bottom: 0
+			.image
+				height: 190px
+				min-width: 190px
+				flex-basis: 35%
+				flex-grow: 0
+				background-size: auto
+			.text
+				flex-basis: 65%
+				flex-grow: 1
+				height: 190px
+		.news_sub
+			width: 100%
+			height: 93px
+			&:first-of-type
+				margin-bottom: 0
+				margin-right: 0
+			&:last-of-type
+				margin-top: 4px
+				margin-left: 0
+			.image
+				height: 93px
+				min-width: 93px
+				flex-basis: 20%
+				flex-grow: 0
+				background-size: cover
+			.text
+				flex-basis: 80%
+				flex-grow: 1
+				height: 93px
+				span
+					position: relative
+					bottom: 0
+					left: 0
+	.insurance
+		.insurance_block
+			.insurance_text
+				h3
+					a
+						&:after
+							height: 2px
+	.footer
+		.site_map
+			.col-md-6
+				&:hover
+					background-color: #ed0039
+				ul
+					padding-left: 10px
+					li
+						background-color: transparent
+						padding: 6px 0px 6px 20px
+						a
+							font-size: 12px
+							&:hover
+								text-decoration: underline
+								&:before
+									border-left-color: #fff
+							&:before
+								border: 4px solid transparent
+								border-left: 4px solid transparent
+				&:last-of-type
+					ul
+						li
+							line-height: 30px
+							font-size: 12px
+							padding: 0px 0px 0px 20px
+							i
+								top: 5px
+								left: 1px
+								font-size: 18px
+		.footer_contact
+			ul
+				float: left
+				li
+					padding: 0 23px
+					&:first-child
+						padding-left: 0
+					a
+						&:after
+							background-color: #fff
+
+
+

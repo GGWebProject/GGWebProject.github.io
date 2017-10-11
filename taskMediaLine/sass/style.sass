@@ -1,0 +1,778 @@
+
+@font-face
+	font-family: Merriweather-Regular
+	src: url("../fonts/Merriweather-Regular.ttf") format("truetype")
+	font-family: Merriweather-Bold
+	src: url("../fonts/Merriweather-Bold.ttf") format("truetype")
+	font-family: FedraSerifAPro-Book
+	src: url("../fonts/FedraSerifAPro-Book.ttf") format("truetype")
+	font-family: Arial-Regular
+	src: url("../fonts/Arial-Regular.ttf") format("truetype")
+
+body
+	font-family: Arial-Regular
+
+.fixed_block
+	z-index: 9999
+
+	ul
+		opacity: 0
+		position: fixed
+		right: 0
+		bottom: 15px
+		margin: 0
+		padding: 0
+		transition: 1s
+		z-index: 9999
+		.mobile
+			a
+				background-color: rgba(137, 39, 55 , .8)
+				color: #fff
+				&:hover
+					background-color: rgba(137, 39, 55 , .8)
+		.hide_elem
+			display: none
+		li
+		
+			list-style-type: none
+			padding: 1px 0
+			z-index: 9999
+			a
+				text-decoration: none
+				color: #6a625a
+				font-size: 12px
+				display: flex
+				flex-direction: column
+				width: 75px
+				height: 75px
+				border-radius: 3px
+				background-color: #f0efed
+				align-items: center
+				justify-content: center
+				transition: .5s
+
+				i
+					color: #8c2c3c
+					font-size: 18px
+					transition: .5s
+				&:hover
+					background-color: #892737
+					color: #fff
+					transition: .5s
+					i
+						color: #fff
+						transition: .5s
+
+h2
+	display: inline-block
+.button
+	display: inline-block
+	background-color: #ed0039
+	color: #fff
+	border-radius: 2px
+	transition: .5s
+a.sub_button
+	text-transform: uppercase
+	text-decoration: none
+	font-size: 10px
+	font-weight: bold
+	color: #6a625a
+	display: inline-block
+	height: 26px
+	line-height: 24px
+	padding: 0 16px
+	border: 1px solid #d5d4d2 
+	border-radius: 13px
+	position: relative
+	transition: .5s
+	&:hover
+		background-color: #fff
+		transition: .5s
+	&:after
+		position: absolute
+		content: '\2192'
+		color: #fff
+		display: inline-block
+		width: 16px
+		height: 16px
+		line-height: 15px
+		text-align: center
+		background-color: #ed0039
+		border-radius: 50%
+		bottom: 5px
+		right: -7px
+		vertical-align: middle
+		font-weight: normal
+
+#navbar
+	height: 96px
+	line-height: 96px
+	color: #6a625a
+	margin-bottom: 0px
+	border: 0px
+	.col-md-20
+		height: 96px
+		.col-md-24
+			height: 48px
+			.col-md-12
+				height: 48px
+			.col-md-10
+				height: 48px
+	ul
+		margin: 0px
+		padding: 0px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	a	
+		text-decoration: none
+		color: #6a625a
+
+		&:hover
+			transition: .5s
+			color: #892737
+
+	li
+		display: inline-block
+	.desctop
+		.col-md-24
+			padding-right: 0px
+	.navbar_top
+		.row
+			
+			line-height: 48px
+			height: 48px
+			box-sizing: border-box
+
+			.col-md-12, .col-md-10
+				padding: 0
+
+		.menu
+			a
+				font-size: 12px
+				height: 28px
+				padding: 10px
+				display: inline
+				transition: .5s
+				&:hover
+					color: #892737
+				&:active, &:focus
+					transition: .5s
+					background-color: #ed0039
+					color: #fff
+					border-radius: 2px
+					transition: .5s
+					color: #fff
+				
+
+		.phone
+			justify-content: space-between
+			i
+				font-size: 18px
+				line-height: 48px
+				padding-left: 3px		
+			li
+				font-size: 13px
+				padding-right: 10px
+				&:last-child
+					padding-right: 0
+
+	.navbar_bottom
+		.row
+			margin-left: 0px
+			border-top: 1px solid #e5e5e5
+			line-height: 48px
+			height: 48px
+			.col-md-12, .col-md-10
+				padding: 0
+
+		.menu
+			li
+				padding-right: 30px
+				height: 48px
+				a
+					font-size: 16px
+					display: inline-block
+					box-sizing: border-box
+					border-bottom: 3px solid transparent
+					width: 100%
+					height: 48px
+					line-height: 48px
+					&:hover
+						border-color: #892737
+						transition: .5s
+
+		form
+			font-size: 12px
+			line-height: 20px
+			
+			input
+				width: 160px
+				border: 2px solid transparent
+				transition: all .5s
+				outline: none
+
+				&:focus,&:active 
+					border-bottom: 2px solid #8f3342
+					transition: all .5s
+			
+			button
+				background-color: transparent
+				padding: 0
+				border: none
+				&:active, &:focus
+					outline: none
+
+				i
+					display: inline-block
+					height: 100%
+					color: #8f3342
+					font-size: 16px
+					line-height: 30px
+		.lang
+			float: right 
+			a
+				display: inline-block
+				width: 30px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				background-color: #fff
+				color: #6a625a
+				border-radius: 2px
+
+				&:hover
+					background-color: #ed0039
+					color: #fff
+					transition: .5s
+			.active-lang
+				background-color: #ed0039
+				color: #fff
+.header
+
+	background: url(../img/h-bg.jpg) no-repeat center center
+	background-size: cover
+	height: 600px
+	color: #fff
+
+	h1
+		margin-top: 140px
+		margin-bottom: 0
+		font-family: Merriweather-Regular
+	p
+		font-size: 24px
+		margin-top: 25px
+		margin-bottom: 0
+	ul
+		margin-top: 45px
+		margin-bottom: 0
+		padding-left: 0
+		font-size: 18px
+
+		li
+			list-style-type: none
+
+			i
+				color: #ed0039
+				padding-right: 10px
+
+	.button
+		font-size: 16px
+		margin-top: 40px
+		padding: 10px 20px
+		text-decoration: none
+		color: #fff
+		&:hover
+			background-color: #6D2133
+
+.contact
+	background-color: #f0efed
+	.container 
+		height: 100%
+		.row
+			display: flex
+			flex-wrap: wrap
+			height: 100%
+			align-items: center
+
+			.col-xs-24
+				margin: auto
+
+			.col-md-12:nth-of-type(3)
+				padding-left: 30px
+				&:before
+					content: ""
+					height: 100%
+					border: 1px solid #dcdad7
+					position: absolute
+					left: 0
+
+
+	h4
+		color: #6a625a
+		margin-top: 0
+	p
+		color: #333333
+		font-size: 24px
+		margin-bottom: 0
+		font-weight: bold
+
+	span
+		display: inline-block
+		color: #6a625a
+		font-size: 12px
+		margin: 10px 0
+
+	ul
+		color: #892737
+		font-size: 12px
+		padding: 0
+		margin-left: 15px
+		
+
+
+	.sub_button
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		text-decoration: none
+		color: #6a625a
+		display: inline-block
+		height: 26px
+		line-height: 24px
+		padding: 0 16px
+		border: 1px solid #d5d4d2 
+		border-radius: 13px
+		position: relative
+		transition: .5s
+		
+		&:hover
+			background-color: #fff
+			transition: .5s
+	.contact_icon_block
+		display: flex
+		justify-content: space-around
+		align-items: center
+	
+		.contact_icon
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin: auto
+			text-align: center
+			background-color: #fff
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			position: relative
+			z-index: 200
+			text-decoration: none
+			transition: .5s
+	
+			&:after
+				position: absolute
+				top: -10px
+				right: -10px
+				content: ''
+				display: inline-block
+				width: 100px
+				height: 100px
+				border-radius: 50%
+				background-color: rgba(255, 255, 255, 0.25)
+				z-index: -100
+
+			&:hover
+				background-color: rgba(109, 33, 51, .09)					
+				transition: .5s
+
+			i
+				color: #892737
+				font-size: 24px
+				margin: 3px
+
+			span
+				color: #6a625a
+				font-size: 12px
+				margin: 3px
+				
+
+.news
+	padding: 50px 0
+	.col-md-24
+		&:first-of-type
+			display: flex
+			align-items: center
+	
+	.sub_button
+		margin-left: 20px
+		transition: .5s
+		&:hover
+			background-color: #f0efed
+			transition: .5s
+
+	h2
+		margin: 0
+		transition: .5s
+		
+		&:hover
+			color: #333333
+			transition: .5s
+
+	.news_block
+		&:before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			right: 0
+			padding-bottom: 0
+			border-bottom: 3px solid transparent
+			transition: .5s
+		margin-top: 40px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		transition: .5s
+		position: relative
+		&:hover
+			transition: .5s
+			-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			&:before
+				border-color: #892737
+				transition: .5s
+			.image, .text
+				border-color: transparent
+				transition: .5s
+
+		a
+			text-decoration: none
+
+		h5, h6
+			color: #892737
+			margin-top: 0
+			transition: .5s
+			font-family: FedraSerifAPro-Book
+			&:hover
+				color: #333333
+				transition: .5s
+		h6
+			font-size: 14px
+		.text
+			
+			color: #6a625a
+			font-size: 12px
+			border: 2px solid #e1e0de
+			border-left: none
+			display: block
+			padding: 20px
+			transition: .5s
+			span
+				font-size: 10px
+				text-transform: uppercase
+	
+		.image
+			transition: .5s	
+	.news_main
+		
+		.image
+			height: 190px
+			background: url(../img/news1.jpg) no-repeat center center
+			background-size: cover
+			min-width: 190px
+			flex-basis: 35%
+
+
+		.text 
+			flex-basis: 65%
+			height: 190px
+
+	.news_sub
+		width: 100%
+
+		.image
+			height: 93px
+			flex-basis: 20%
+			min-width: 93px
+
+	
+		.text 
+			flex-basis: 80%
+			height: 93px
+		&:first-child
+			.image
+				background: url(../img/news2.jpg) no-repeat center center
+				background-size: cover
+
+		&:last-child
+			margin-top: 4px
+			.image
+				background: url(../img/news3.jpg) no-repeat center center
+				background-size: cover
+
+.insurance
+	background-color: #f0efed
+
+	h2
+		color: #333333
+		margin: 48px 0 40px 0
+	
+	.insurance_block
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 25px
+		width: 100%
+		transition: .5s
+		min-height: 265px
+		
+		&:nth-of-type(1)
+			.insurance_image
+				background: url(../img/save1.jpg) no-repeat center center
+				background-size: cover
+
+		&:nth-of-type(2)
+			.insurance_image
+				background: url(../img/save2.jpg) no-repeat center center
+				background-size: cover
+
+		&:nth-of-type(3)
+			margin-bottom: 55px
+			.insurance_image
+				background: url(../img/save3.jpg) no-repeat center center
+				background-size: cover
+
+		.insurance_image
+			position: relative
+			background-color: black
+			min-height: 265px
+			min-width: 380px
+			flex-basis: 34%
+			
+
+		.insurance_text
+			background-color: #fff
+			padding: 30px
+			color: #6a625a
+			flex-basis: 66%
+			
+			h3
+				font-family: FedraSerifAPro-Book
+				a
+					color: #892737
+					text-decoration: none
+					display: inline-block
+					position: relative
+					&:after
+						position: absolute
+						content: ''
+						width: 0%
+						height: 2px
+						left: 0
+						bottom: -1px
+						background-color: #892737
+						transition: .5s
+			p
+				font-size: 16px
+				margin-bottom: 30px
+
+		&:hover
+			-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6)
+			transition: .5s
+			h3
+				a
+					&:after
+						width: 100%
+						transition: .5s
+
+
+		.button
+			text-align: center
+			width: 140px
+			height: 40px
+			line-height: 40px
+			text-decoration: none
+			color: #fff
+
+			&:first-of-type
+				background-color: #6a625a
+				margin-right: 5px
+			&:hover
+				background-color: #6D2133
+
+.footer
+	background-color: #6a625a
+	color: #fff
+	
+	a
+		color: #fff
+		text-decoration: none
+		font-size: 12px
+
+	.site_map
+		display: flex
+		flex-wrap: wrap
+		.slide_list
+			position: relative
+			span
+				transform-origin: center 4px
+				transform: rotate(0)
+				position: absolute
+				content: ''
+				border: 8px solid transparent
+				border-top: 8px solid #fff
+				display: inline-block
+				right: 0
+				top: 5px
+				transition: all .5s
+			.rotate_elem
+				transform: rotate(180deg)
+		.col-md-6
+			background-color: transparent
+			transition: .5s
+			&:hover
+				background-color: #ed0039
+				transition: .5s
+			&:last-of-type
+				ul
+					li
+						position: relative
+						font-size: 12px
+						line-height: 28px
+						i
+							position: absolute
+							font-size: 20px
+							top: 2px
+							left: 0
+			ul
+	
+				li
+					list-style-type: none
+					font-size: 12px
+					padding: 0 0 15px 10px
+	
+					a
+						text-decoration: none
+						display: inline-block
+						position: relative
+						&:before
+							border: 4px solid transparent
+							border-left: 4px solid transparent
+							position: absolute
+							display: inline-block
+							content: ''
+							left: -9px
+							top: 3px
+	
+						&:hover
+							text-decoration: underline
+							&:before
+								border-left-color: #fff
+								transition: .2s
+	.promises
+		background-color: #fff
+		color: #181717
+		line-height: 50px
+		p
+			display: inline-block
+			font-size: 16px
+			margin: 0
+			margin-right: 10px
+	
+			span
+				margin: 0 8px
+		ul
+			margin: 0
+			padding-left: 30px
+			li
+				padding: 0 10px
+				display: inline-block
+				list-style-type: none
+	
+				img
+					height: 18px
+	
+	.footer_contact
+		.container
+			.row
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+
+		line-height: 55px
+		ul
+			margin: 0
+			padding: 0px
+			li
+				padding: 0 23px
+				display: inline-block
+				list-style-type: none
+				line-height: 20px
+				border-right: 1px solid #7e7871
+				&:last-child
+					padding-right: 0
+					border-right: none
+					a
+						padding-right: 0
+				a
+					display: inline-block
+					height: 20px
+					line-height: 20px
+					position: relative
+					&:after
+						position: absolute
+						display: inline-block
+						content: ''
+						width: 0%
+						height: 1px
+						left: 0px
+						bottom: 0px
+						background-color: #ffffff
+						transition: .5s
+					&:hover
+						&:after
+							width: 100%
+							transition: .5s
+	
+		span
+			float: right
+			height: 55px
+			a
+				position: relative
+				&:after, &:before
+					position: absolute
+					display: inline-block
+					content: ''
+					width: 0%
+					height: 1px
+					bottom: 0px
+					background-color: #ffffff
+					transition: .5s
+				&:after
+					left: 0px
+				&:before
+					right: 0px	
+				&:hover
+					&:after, &:before
+						width: 50%
+						transition: .5s ease-in-out
+		.button
+			height: 30px
+			width: 80px
+			line-height: 30px
+			display: block
+			text-align: center
+			background-color: #78716a
+			transition: .5s
+			margin: 0px auto
+			&:hover
+				background-color: #6D2133
+				transition: .5s
+
+
+			
