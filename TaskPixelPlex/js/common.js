@@ -64,7 +64,7 @@ $(function () {
 
 
             var scroll_top = $(document).scrollTop();
-            
+
             $(menuName[i] + ' a[href]').each(function () {
                 var blockID = $(this).attr("href");
                 var activeItem  = $(blockID);
@@ -85,7 +85,7 @@ $(function () {
     $(document).on("scroll", onScroll);
  
 
-    $(".menu a[href]").click(function(){
+    $(".menu a[href]").click(function(event){
 
            
             var linkPosition = $(this).parent().index(); // позиция нажатого li в меню
@@ -100,11 +100,12 @@ $(function () {
 
             var blockID = $(this).attr("href");
             var activeItem  = $(blockID);
-            var namePart = activeItem.parent().prop("tagName"); // название части сайта для изменения menuHeight на 0 для экранов 1900+px
+            console.dir(activeItem);
+            var namePart = $("#work").parent().prop("tagName"); // название части сайта для изменения menuHeight на 0 для экранов 1900+px
             
             setMenuHeight(namePart);
 
-            $("html").animate({
+            $("html, body").animate({
                 scrollTop: activeItem.offset().top - menuHeight
             }, 500, function(){
                 window.location.blockID = blockID;
