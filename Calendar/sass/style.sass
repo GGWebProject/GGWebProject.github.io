@@ -1,0 +1,121 @@
+@import 'part'
+
+.table
+	font-size: 0
+	.tr, .th, .tc
+		display: inline-block
+	.tr
+		width: 100%
+		cursor: default
+		height: 35px
+		border-bottom: 2px solid #fff
+	.th, .tc
+		min-width: 45px
+		width: calc(100%/7)
+		text-align: center
+		line-height: 35px
+		height: 100%
+		box-sizing: border-box
+	.th
+		font-size: 16px
+		font-weight: bold
+		color: #fff
+		background-color: #26596F
+		&:nth-child(6), &:nth-child(7)
+			color: #EBBA73
+	.tc
+		font-size: 16px
+		border-right: 1px solid #fff
+		float: left
+		&:nth-child(6), &:nth-child(7)
+			// color: #C3924B
+		&:nth-child(7)
+			border-right: none
+
+.day
+	cursor: pointer
+	background-color: #E7E9E8
+	transition: .3s
+	@media (min-width: 1024px)
+		&:hover
+			background-color: #ccc
+
+.today
+	position: relative
+	&:after
+		position: absolute
+		content: ''
+		top: 5px
+		right: 5px
+		width: 6px
+		height: 6px
+		border-radius: 100%
+		background-color: #3883A2
+
+.select-day
+	background-color: #555
+	color: #fff
+.reserve-day
+	position: relative
+	cursor: default
+	&:before
+		position: absolute
+		content: ''
+		bottom: 5px
+		right: 50%
+		width: 50%
+		height: 2px
+		background-color: red
+		transform: translate(50%, 0)
+
+
+.calendar
+	display: inline-block
+	max-width: 315px
+.select-date
+
+.description-day
+	display: inline-block
+	div
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		i
+			width: 40px
+			height: 30px
+			display: inline-block
+			border: 1px solid #fff
+			box-sizing: border-box
+
+
+
+.calendar__header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 5px 20px
+	background-color: #26596F
+	color: #fff
+.month, .year
+	font-size: 20px
+	text-align: center
+	display: inline-block
+.arrow
+	width: 14px
+	height: 14px
+	box-sizing: border-box
+	border-top: 1px solid #fff
+	border-right: 1px solid #fff
+	display: inline-block
+	transition: border-color .3s
+	cursor: pointer
+	@media (min-width: 1024px)
+		&:hover
+			border-color: orange
+.next
+	transform: rotate(45deg)
+.prev
+	transform: rotate(225deg)
+.hidden
+	visibility: hidden
+	transition: 0s
