@@ -23,6 +23,7 @@ $(function () {
         if (windowWidth >= 1024){
             $('.menu').removeClass('menu-mobile menu-open');
             $('.button-menu').removeClass('button-menu-open');
+            $('body').removeClass('no-scroll');
             moveBlock.detach().prependTo('.header__main'); // перемещение по dom картинки телефона
             menuHeight = 90;
         } else {
