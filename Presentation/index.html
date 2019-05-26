@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CSS Grid Layout</title>
+		<meta name="author" content="Vitali Hantarenka">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>CSS Grid Layout</h1>
+					<small>
+						by Vitali Hantarenka
+					</small>
+				</section>
+				<section>
+					<h2>Presentation plan</h2>
+					<ol>
+						<li class="fragment highlight-blue">Useful links</li>
+						<li class="fragment highlight-blue">Browser support</li>
+						<li class="fragment highlight-blue">What is a Grid?</li>
+						<li class="fragment highlight-blue">Create a simple layout</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Useful Links</h2>
+					<ol>
+						<li class="fragment fade-down"><a href="https://www.w3.org/TR/css-grid-1/" target="_blank">Specification </a></li>
+						<li class="fragment fade-down"><a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-template-areas)" target="_blank">CSS tricks</a></li>
+						<li class="fragment fade-down"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">	MDN</a></li>
+						<li class="fragment fade-down"><a href="https://cssgridgarden.com" target="_blank">Grid Garden</a></li>
+					</ol>
+				</section>
+				<section>
+					<h2>Browser support</h2>
+					<img width="auto" height="auto" data-src="./assets/img/caniuse.png" alt="Can i use">
+				</section>
+				<section>
+					<section>
+						<h2>What is CSS Grid Layout?</h2>
+						<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">
+							&ldquo;CSS Grid introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.&rdquo;
+						</blockquote>
+					</section>
+					<section>
+						<h2>Flexbox & Grid model</h2>
+					</section>
+					<section>
+						<h3>Flexbox Model</h3>
+						<p>One-dimensional grid system</p>
+						<img width="auto" height="auto" data-src="./assets/img/flexbox_model.png" alt="Can i use">
+					</section>
+					<section>
+						<h3>Grid Model</h3>
+						<p>Two-dimensional grid system</p>
+						<img width="auto" height="auto" data-src="./assets/img/grid_lines.png" alt="Can i use" style="background-color: white">
+					</section>
+					<section>
+						<h3>Examples</h3>
+						<img width="auto" height="auto" data-src="./assets/img/grid_layout.jpg" alt="Can i use">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Get started</h2>
+					</section>
+					<section>
+						<h3>Step 1</h3>
+					</section>
+					<section>
+						<p>HTML code:</p>
+						<pre class="fragment">
+							<code class="hljs" data-trim>
+							<div class="container">
+							  &lt;header&gt;header&lt;/header&gt;
+							  &lt;nav class="menu"&gt;menu&lt;/nav&gt;
+							  &lt;section class="hero"&gt;hero&lt;/section&gt;
+							  &lt;main&gt;main&lt;/main&gt;
+							  &lt;div class="image"&gt;image&lt;/div&gt;
+							  &lt;div class="extra"&gt;extra&lt;/div&gt;
+							  &lt;div class="banner"&gt;banner&lt;/div&gt;
+							</div>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>
+							Browser window:
+							<img class="fragment" width="auto" height="auto" data-src="./assets/img/img1.png" alt="Can i use">
+						</p>
+					</section>
+					<section>
+						<h3>Step 2</h3>
+					</section>
+					<section>
+						<p>CSS code:</p>
+						<pre class="fragment">
+							<code class="hljs" data-trim>
+								.container {
+								  display: grid;
+								  grid-template-areas:  'header menu menu menu'
+											'hero hero hero hero'
+											'main main . image'
+											'main main . extra'
+											'banner banner banner banner';
+								}
+
+								header {
+								  grid-area: header;
+								}
+
+								.menu {
+								  grid-area: menu;
+								}
+
+								.hero {
+								  grid-area: hero;
+								}
+
+								main {
+								  grid-area: main;
+								}
+
+								.image {
+								  grid-area: image;
+								}
+
+								.extra {
+								  grid-area: extra;
+								}
+
+								.banner {
+								  grid-area: banner;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>
+							Browser window:
+							<img class="fragment" width="auto" height="auto" data-src="./assets/img/img2.png" alt="Can i use">
+						</p>
+					</section>
+					<section>
+						<h3>Step 3</h3>
+					</section>
+					<section>
+						<p>CSS code:</p>
+						<pre>
+							<code class="hljs" data-trim>
+								.container {
+								  display: grid;
+								  grid-template-areas:  'header menu menu menu'
+											'hero hero hero hero'
+											'main main . image'
+											'main main . extra'
+											'banner banner banner banner';
+								  grid-template-rows: 50px 200px 50px 50px 50px;
+								  grid-template-columns: 1fr 1fr 1fr 1fr;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>
+							Browser window:
+							<img class="fragment" width="auto" height="auto" data-src="./assets/img/img3.png" alt="Can i use">
+						</p>
+					</section>
+					<section>
+						<h3>Step 4</h3>
+					</section>
+					<section>
+						<p>CSS code:</p>
+						<pre class="fragment">
+							<code class="hljs" data-trim>
+								@media (max-width: 900px) {
+								  .container {
+								  grid-template-areas:  'header header header header'
+											  'hero hero hero hero'
+											  'menu main main main'
+											  'menu banner banner banner'
+											  'menu extra extra image';
+								  grid-template-rows: 50px 150px 100px 50px 50px;
+								  grid-template-columns: 1fr 1fr 1fr 1fr;
+								  }
+								}
+								@media (max-width: 500px) {
+								  .container {
+									  grid-template-rows: 50px 50px 100px 100px 50px 50px 50px;
+									  grid-template-columns: 1fr;
+									  grid-template-areas:  'header'
+												'menu'
+												'hero'
+												'main'
+												'banner'
+												'extra'
+												'image';
+								  }
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Browser window:</p>
+						<p class="fragment">Window width is 900px: <br>
+							<img width="auto" height="auto" data-src="./assets/img/img4_1.png" alt="Can i use">
+						</p>
+					</section>
+					<section>
+						<p>Window width is 500px: <br>
+							<img width="auto" height="auto" data-src="./assets/img/img4_2.png" alt="Can i use">
+						</p>
+					</section>
+					<section>
+						<h3>Final step</h3>
+					</section>
+					<section>
+						<p>CSS code:</p>
+						<pre class="fragment">
+							<code class="hljs" data-trim>
+								.container > * {
+								  display: flex;
+								  align-items: center;
+								  justify-content: center;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Result</h2>
+						<a href="https://codepen.io/vitali_a/pen/arGaMe" target="_blank">Link to CodePen</a>
+					</section>
+					<section>
+						<p>Desctop:</p>
+						<img class="fragment" width="auto" height="auto" data-src="./assets/img/img5_1.png" alt="Can i use">
+					</section>
+					<section>
+						<p>Tablet:</p>
+						<img class="fragment" width="auto" height="auto" data-src="./assets/img/img5_2.png" alt="Can i use">
+					</section>
+					<section>
+						<p>Mobile:</p>
+						<img class="fragment" width="auto" height="auto" data-src="./assets/img/img5_3.png" alt="Can i use">
+					</section>
+				</section>
+				<section>
+					<h2>In the end</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
