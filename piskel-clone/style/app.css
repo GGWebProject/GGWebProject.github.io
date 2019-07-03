@@ -129,33 +129,33 @@ header {
     .tools .tool:not(.outside):hover {
       border-color: #ff9439; }
     .tools .tool_paint-bucket {
-      background-image: url(/assets/images/paint-bucket.png);
+      background-image: url(../assets/images/paint-bucket.png);
       pointer-events: none; }
     .tools .tool_color-picker {
-      background-image: url(/assets/images/choose-color.png); }
+      background-image: url(../assets/images/choose-color.png); }
     .tools .tool_move {
-      background-image: url(/assets/images/move.png); }
+      background-image: url(../assets/images/move.png); }
     .tools .tool_lighten-darken {
-      background-image: url(/assets/images/lighten.png); }
+      background-image: url(../assets/images/lighten.png); }
     .tools .tool_pen {
-      background-image: url(/assets/images/pen.png); }
+      background-image: url(../assets/images/pen.png); }
     .tools .tool_line {
-      background-image: url(/assets/images/line.png);
+      background-image: url(../assets/images/line.png);
       background-size: 60%; }
     .tools .tool_clean {
-      background-image: url(/assets/images/clear.png); }
+      background-image: url(../assets/images/clear.png); }
     .tools .tool_eraser {
-      background-image: url(/assets/images/eraser.png); }
+      background-image: url(../assets/images/eraser.png); }
     .tools .tool_ellipse {
-      background-image: url(/assets/images/ellipse.png);
+      background-image: url(../assets/images/ellipse.png);
       background-size: 60%; }
       .tools .tool_ellipse__paint {
-        background-image: url(/assets/images/ellipse1.png);
+        background-image: url(../assets/images/ellipse1.png);
         background-size: 60%; }
     .tools .tool_rectangle {
-      background-image: url(/assets/images/rectangle.png); }
+      background-image: url(../assets/images/rectangle.png); }
       .tools .tool_rectangle__paint {
-        background-image: url(/assets/images/rectangle1.png); }
+        background-image: url(../assets/images/rectangle1.png); }
     .tools .tool_pen-size {
       width: 100%;
       display: flex;
@@ -202,7 +202,7 @@ header {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(/assets/images/color-swap.png);
+        background-image: url(../assets/images/color-swap.png);
         bottom: 5px;
         left: 5px;
         cursor: pointer;
@@ -306,7 +306,7 @@ header {
     cursor: pointer;
     border: 1px solid black;
     background-size: 55%;
-    background-image: url(/assets/images/remove.png); }
+    background-image: url(../assets/images/remove.png); }
     .frame__remove:hover {
       border-color: red;
       background-color: white; }
@@ -317,7 +317,7 @@ header {
     cursor: pointer;
     border: 1px solid black;
     background-size: 65%;
-    background-image: url(/assets/images/copy.png); }
+    background-image: url(../assets/images/copy.png); }
     .frame__copy:hover {
       border-color: red;
       background-color: white; }
@@ -329,7 +329,7 @@ header {
     border: 1px solid black;
     background-color: #ccc;
     background-size: 65%;
-    background-image: url(/assets/images/move.png); }
+    background-image: url(../assets/images/move.png); }
     .frame__move:hover {
       border-color: red;
       background-color: white; }
@@ -440,7 +440,7 @@ header {
   .preview__fullscreen {
     width: 30px;
     height: 30px;
-    background-image: url(/assets/images/fullscreen.png);
+    background-image: url(../assets/images/fullscreen.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
